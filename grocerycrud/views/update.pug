@@ -1,0 +1,64 @@
+doctype html
+head
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title Superb Grocery IS
+    link(rel='stylesheet' type="text/css" href='stylesheets/style.css')
+    script(type='text/javascript' src='javascripts/validate.js')
+.main-nav
+    ul.nav
+        li.name Superb Grocery IS
+        li
+            a(href='index') Home
+        li
+            a(href='listing') Listing
+        li
+            a(href='entry') Add
+        li
+            a(href='update') Update
+        li
+            a(href='delete') Delete
+header
+    #wrapperr
+        h1(align='center' style='color:blueviolet') Update Products
+        form(name='form3' action='/updated'  method='post' style='margin-top: 20px' id="formid2")
+            input(name='_method', value='PUT', type='hidden')
+            table#table2(align='center' border='3')
+                tr
+                    td
+                        label(for='update_id') ID:
+                    td
+                        input#update_id(type='text' name='updid_name' pattern='^[a-zA-Z][a-zA-Z0-9-_\.]{5}$' placeholder='RWS35O'
+                        onfocus="this.select()" onchange="alphanumeric(this)" required='')
+                tr
+                    td
+                        label(for='update_product') Product:
+                    td
+                        input#update_product(type='text' name='updproduct_name' onfocus="this.select()" onchange="letpattern(this)"
+                        required='')
+                tr
+                    td
+                        label(for='update_price') Price:
+                    td
+                        input#update_price(type='text' name='updprice_name' placeholder='9999 OR 9999.99' onfocus="this.select()"
+                        onchange="price(this)" required='')
+                tr
+                    td
+                        label(for='update_quantity') Quantity:
+                    td
+                        input#update_quantity(type='text' name='updquantity_name' placeholder='9999' onfocus="this.select()"
+                        onchange="numeric(this)" required='')
+                tr
+                    td(colspan='2' align='center')
+                        button.reset(type='reset' value='Reset') Reset
+                        button.update_btn(type='submit' value='Submit' onclick="return submissionUpd()" ) Update
+footer
+    p#copy &copy; 2018 SuperbGroceryIS.com
+
+    script.
+        window.onload = function () {
+            document.getElementById('formid2').onsubmit = function () {
+                alert('Your data has been updated!');
+                return true;
+            }
+        }

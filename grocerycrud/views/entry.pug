@@ -1,0 +1,63 @@
+doctype html
+head
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title Superb Grocery IS
+    link(rel='stylesheet' type="text/css" href='stylesheets/style.css'  )
+    script(type='text/javascript' src='javascripts/validate.js')
+.main-nav
+    ul.nav
+        li.name Superb Grocery IS
+        li
+            a(href='index') Home
+        li
+            a(href='listing') Listing
+        li
+            a(href='entry') Add
+        li
+            a(href='update') Update
+        li
+            a(href='delete') Delete
+header
+    #wrap
+        h1(align='center' style='color:blueviolet') Add Products
+        form(name='form2' action='/saveit' method='post' style='margin-top: 20px' id="formid" )
+            table#table2(align='center' border='3')
+                tr
+                    td
+                        label(for='entry_id') ID:
+                    td
+                        input#entry_id(type='text' name='id_name' onfocus="this.select()" onchange="alphanumeric(this)"
+                        pattern='^[a-zA-Z][a-zA-Z0-9-_\.]{5}$' placeholder='RWS35O' required='')
+                tr
+                    td
+                        label(for='entry_product') Product:
+                    td
+                        input#entry_product(type='text' name='product_name' onfocus="this.select()" onchange="letpattern(this)"
+                        required='')
+                tr
+                    td
+                        label(for='entry_price') Price:
+                    td
+                        input#entry_price(type='text' name='price_name' placeholder='9999 OR 9999.99' onfocus="this.select()" onchange="price(this)"
+                        required='')
+                tr
+                    td
+                        label(for='entry_quantity') Quantity:
+                    td
+                        input#entry_quantity(type='number' name='quantity_name' placeholder='9999' onfocus="this.select()" onchange="numeric(this)"
+                        required='')
+                tr
+                    td(colspan='2' align='center')
+                        button.reset(type='reset' value='Reset') Reset
+                        button.submit(type='submit' value='Submit' ) Submit
+footer
+    p#copy &copy; 2018 SuperbGroceryIS.com
+
+    script.
+        window.onload = function () {
+            document.getElementById('formid').onsubmit = function () {
+                alert('Your data has been submitted!');
+                return true;
+            }
+        }

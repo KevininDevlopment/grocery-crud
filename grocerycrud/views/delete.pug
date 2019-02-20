@@ -1,0 +1,45 @@
+doctype html
+head
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title Superb Grocery IS
+    link(rel='stylesheet' type="text/css" href='stylesheets/style.css')
+    script(type='text/javascript' src='javascripts/validate.js')
+.main-nav
+    ul.nav
+        li.name Superb Grocery IS
+        li
+            a(href='index') Home
+        li
+            a(href='listing') Listing
+        li
+            a(href='entry') Add
+        li
+            a(href='update') Update
+        li
+            a(href='delete') Delete
+header
+    #wrapp
+        h1(align='center' style='color:blueviolet') Delete Products
+        form(action='/deleted' method='post' style='margin-top: 20px' id="form3")
+            table#table2(align='center' border='3')
+                tr
+                    td
+                        label(for='delete_id') ID:
+                    td
+                        input#delete_id(type='text' name='delid_name' pattern='^[a-zA-Z][a-zA-Z0-9-_\.]{5}$' placeholder='RWS35O'
+                        onfocus="this.select()" onchange="alphanumeric(this)" required='')
+
+                    td(colspan='2' align='center')
+                        button.reset(type='reset' value='Reset') Reset
+                        button.delete(type='submit' value='Submit' onclick="return submissionDel()" ) Delete
+footer
+    p#copy &copy; 2018 SuperbGroceryIS.com
+
+    script.
+        window.onload = function () {
+            document.getElementById('form3').onsubmit = function () {
+                alert('Your data has been deleted!');
+                return true;
+            }
+        }

@@ -1,0 +1,237 @@
+
+
+main-nav {
+  width: 100%;
+  background: black;
+  min-height: 30px;
+  padding: 10px;
+  position: fixed;
+  text-align: center;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-around;
+  font-weight: 700;
+  list-style-type: none;
+  background-color: black;
+}
+
+.nav li {
+  padding: 5px 10px 10px 10px;
+}
+
+.nav a {
+  transition: all .5s;
+  color: green;
+}
+
+.nav a:hover {
+  color: purple;
+}
+
+.name {
+  color: green;
+}
+
+/* copy right footer */
+#copy {
+  color: green;
+  font-weight: 700;
+  text-align: center;
+  padding-top: 40px;
+}
+
+#heading1 {
+  font-weight: 700;
+}
+
+/* index Introduction */
+#introduction {
+  margin-left: auto;
+  margin-right: auto;
+  width: 50em;
+  font-family: verdana;
+  font-weight: 700;
+  line-height: 40px;
+  padding-left: 20px !important;
+}
+#introduction2 {
+  margin-left: auto;
+  margin-right: auto;
+  width: 50em;
+  font-family: verdana;
+  font-weight: 700;
+  line-height: 40px;
+  padding-left: 20px !important;
+}
+
+#information2 {
+  margin-bottom: 50px;
+}
+
+/* index header */
+#heading1 {
+  text-align: center;
+}
+
+/* index images */
+#container {
+  overflow: hidden;}
+
+#images-right {
+  float:right;
+}
+
+#images-left {
+  float:left;
+}
+
+#images-right img{
+  display: block;
+}
+
+#img2 {
+  padding-top: 15px;
+}
+
+#img3 {
+  padding-top: 15px;
+}
+
+#side-content {
+  font-weight: 700;
+
+}
+
+#side-content side {
+  display:block;
+
+}
+
+#side {
+  font-family: verdana;
+  font-weight: 700;
+  line-height: 30px;
+
+
+}
+
+text {
+  display: none !important
+}
+
+
+
+/* Buttons */
+.save {
+  background-color: lightgreen;
+  font-weight: 700;
+  color: black;
+}
+
+.edit {
+  background-color: lightblue;
+  font-weight: 700;
+  color: black;
+}
+
+.delete {
+  background-color: red;
+  font-weight: 700;
+  color: black;
+}
+
+.add.ui-btn.ui-shadow.ui-corner-all {
+  background-color: mediumpurple;
+  font-weight: 700;
+  color: black;
+
+}
+
+table, th, td{
+  border-color: darkturquoise;
+}
+
+.reset {
+  background-color: lightseagreen;
+  font-weight: 700;
+  color: black;
+}
+
+.submit {
+  background-color: chartreuse;
+  font-weight: 700;
+  color: black;
+}
+
+.update_btn {
+  background-color: goldenrod;
+  font-weight: 700;
+  color: black;
+}
+
+/* Media Queries */
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+  .nav li {
+    padding: 5px 5px 5px 5px;
+  }
+
+
+  #side-content side {
+    display:block;
+  }
+
+  #side {
+    font-family: verdana;
+    font-weight: 700;
+  }
+  #images-right {
+    width: 100px !important;
+  }
+
+  #img1  {
+    width: 100px !important;
+
+  }
+  #img2  {
+    width: 100px !important;
+
+  }
+  #img3  {
+    width: 100px !important;
+
+  }
+
+  #img4  {
+    width: 100px !important;
+
+  }
+
+  h1  {
+    font-size: 1em;
+
+  }
+
+  h2 {
+    font-size: 1em;
+  }
+}
+
+
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}
